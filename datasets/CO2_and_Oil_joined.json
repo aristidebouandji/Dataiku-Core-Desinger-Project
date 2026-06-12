@@ -93,7 +93,7 @@
       {"name":"Per capita CO₂ emissions (tonnes per capita)","type":"float"},
       {"name":"Oil production (Etemad \u0026 Luciana) (terawatt-hours)","type":"float"},
       {"name":"meat_prod_tonnes","type":"string"},
-      {"name":"Meat_supply_kgperCap","type":"float"},
+      {"name":"Meat_supply_kgperCap","type":"double"},
       {"name":"Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)","type":"string"},
       {"name":"Urban (%)","type":"float"},
       {"name":"GDP per capita (int.-$) ($)","type":"string","meaning":"LongMeaning"},
