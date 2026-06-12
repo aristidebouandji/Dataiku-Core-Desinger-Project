@@ -92,7 +92,7 @@
     "columns": [
       {"name":"Entity","type":"string"},
       {"name":"Code","type":"string"},
-      {"name":"Year","type":"string"},
+      {"name":"Year","type":"bigint"},
       {"name":"Per capita CO₂ emissions (tonnes per capita)","type":"string"},
       {"name":"Oil production (Etemad \u0026 Luciana) (terawatt-hours)","type":"string"}
     ],
