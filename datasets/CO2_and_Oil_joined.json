@@ -87,7 +87,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Entity","type":"string"},
+      {"name":"Entity","type":"string","meaning":"Text"},
       {"name":"Code","type":"string"},
       {"name":"Year","type":"bigint"},
       {"name":"Per capita CO₂ emissions (tonnes per capita)","type":"float"},
