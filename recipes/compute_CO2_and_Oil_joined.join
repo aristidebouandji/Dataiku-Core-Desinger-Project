@@ -6,41 +6,151 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "Entity",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "Entity",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        },
+        {
+          "column1": {
+            "name": "Year",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "Year",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
+    },
+    {
+      "table2": 2,
+      "table1": 1,
+      "conditionsMode": "AND",
+      "rightLimit": {},
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": [
+        {
+          "column1": {
+            "name": "Entity",
+            "table": 1
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "Entity",
+            "table": 2
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        },
+        {
+          "column1": {
+            "name": "Year",
+            "table": 1
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "Year",
+            "table": 2
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "Entity",
+      "type": "string",
       "table": 0
     },
     {
       "name": "Code",
+      "type": "string",
       "table": 0
     },
     {
       "name": "Year",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Per capita CO₂ emissions (tonnes per capita)",
+      "type": "float",
       "table": 0
     },
     {
       "name": "Oil production (Etemad \u0026 Luciana) (terawatt-hours)",
+      "type": "float",
       "table": 0
     },
     {
       "name": "meat_prod_tonnes",
+      "type": "string",
       "table": 1
     },
     {
       "name": "Meat_supply_kgperCap",
+      "type": "float",
       "table": 1
     },
     {
       "name": "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)",
+      "type": "string",
       "table": 1
+    },
+    {
+      "name": "Urban (%)",
+      "type": "float",
+      "table": 2
+    },
+    {
+      "name": "GDP per capita (int.-$) ($)",
+      "type": "string",
+      "table": 2
+    },
+    {
+      "name": "Population",
+      "type": "float",
+      "table": 2
     }
   ],
   "resolvedSelectedColumns": [],
@@ -83,17 +193,39 @@
   },
   "virtualInputs": [
     {
-      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "outputColumnsSelectionMode": "MANUAL",
       "preFilter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "$latestOperator": "\u0026\u0026",
+          "$filterOptions": "rules",
+          "conditions": [
+            {
+              "input": "Year",
+              "col": "Entity",
+              "$showList": false,
+              "num": 2008,
+              "operator": "\u003e\u003d [number]"
+            },
+            {
+              "input": "Year",
+              "col": "Entity",
+              "$showList": false,
+              "num": 2012,
+              "operator": "\u003c\u003d [number]"
+            }
+          ]
+        },
+        "$status": {},
         "distinct": false,
-        "enabled": false
+        "enabled": true
       },
       "originLabel": "CO2_and_Oil",
       "index": 0,
       "computedColumns": []
     },
     {
-      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "outputColumnsSelectionMode": "MANUAL",
       "preFilter": {
         "distinct": false,
         "enabled": false
@@ -101,7 +233,68 @@
       "originLabel": "Meat_and_Egg_Production",
       "index": 1,
       "computedColumns": []
+    },
+    {
+      "outputColumnsSelectionMode": "MANUAL",
+      "preFilter": {},
+      "index": 2
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "Entity",
+            "type": "string"
+          },
+          {
+            "name": "Code",
+            "type": "string"
+          },
+          {
+            "name": "Year",
+            "type": "bigint"
+          },
+          {
+            "name": "Per capita CO₂ emissions (tonnes per capita)",
+            "type": "float"
+          },
+          {
+            "name": "Oil production (Etemad \u0026 Luciana) (terawatt-hours)",
+            "type": "float"
+          },
+          {
+            "name": "meat_prod_tonnes",
+            "type": "string"
+          },
+          {
+            "name": "Meat_supply_kgperCap",
+            "type": "float"
+          },
+          {
+            "name": "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)",
+            "type": "string"
+          },
+          {
+            "name": "Urban (%)",
+            "type": "float"
+          },
+          {
+            "meaning": "LongMeaning",
+            "name": "GDP per capita (int.-$) ($)",
+            "type": "string"
+          },
+          {
+            "meaning": "DoubleMeaning",
+            "name": "Population",
+            "type": "float"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
