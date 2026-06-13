@@ -95,7 +95,7 @@
       {"name":"Year","type":"bigint"},
       {"name":"Urban (%)","type":"float"},
       {"name":"GDP per capita (int.-$) ($)","type":"string","meaning":"LongMeaning"},
-      {"name":"Population","type":"float","meaning":"DoubleMeaning"}
+      {"name":"Population","type":"double","meaning":"DoubleMeaning"}
     ],
     "userModified": true
   },
