@@ -97,7 +97,7 @@
       {"name":"Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)","type":"bigint"},
       {"name":"Urban (%)","type":"float"},
       {"name":"GDP per capita (int.-$) ($)","type":"string","meaning":"LongMeaning"},
-      {"name":"Population","type":"bigint","meaning":"Text"}
+      {"name":"Population","type":"bigint","meaning":"DoubleMeaning"}
     ],
     "userModified": true
   },
