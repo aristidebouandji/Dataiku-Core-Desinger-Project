@@ -149,7 +149,7 @@
     },
     {
       "name": "Population",
-      "type": "float",
+      "type": "double",
       "table": 2
     }
   ],
@@ -289,7 +289,7 @@
           {
             "meaning": "DoubleMeaning",
             "name": "Population",
-            "type": "float"
+            "type": "double"
           }
         ],
         "userModified": false
