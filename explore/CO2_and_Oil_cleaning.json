@@ -1,0 +1,140 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL",
+      "list": [
+        {
+          "name": "Entity",
+          "d": true
+        },
+        {
+          "name": "Code",
+          "d": true
+        },
+        {
+          "name": "Year",
+          "d": true
+        },
+        {
+          "name": "Per capita CO₂ emissions (tonnes per capita)",
+          "d": true
+        },
+        {
+          "name": "Oil production (Etemad \u0026 Luciana) (terawatt-hours)",
+          "d": true
+        },
+        {
+          "name": "Meat_supply_kgperCap",
+          "d": true
+        },
+        {
+          "name": "Urban (%)",
+          "d": true
+        },
+        {
+          "name": "GDP per capita (int.-$) ($)",
+          "d": true
+        },
+        {
+          "name": "Oil_prod_per_capita",
+          "d": true
+        },
+        {
+          "name": "Meat_prod_per_capita",
+          "d": true
+        },
+        {
+          "name": "eggs_prod_per_capita",
+          "d": true
+        }
+      ]
+    },
+    "columnOrder": [],
+    "columnWidthsByName": {
+      "Entity": 155,
+      "Code": 100,
+      "Year": 100,
+      "Per capita CO₂ emissions (tonnes per capita)": 300,
+      "Oil production (Etemad \u0026 Luciana) (terawatt-hours)": 300,
+      "Meat_supply_kgperCap": 165,
+      "Urban (%)": 134,
+      "GDP per capita (int.-$) ($)": 218,
+      "Oil_prod_per_capita": 183,
+      "Meat_prod_per_capita": 190,
+      "eggs_prod_per_capita": 190
+    },
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "individualColumnsRules": [],
+      "valueColoringMode": "HASH",
+      "coloringGroups": []
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "customMeasures": [],
+  "reusableDimensions": [],
+  "hierarchies": []
+}
