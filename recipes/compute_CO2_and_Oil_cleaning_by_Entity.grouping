@@ -5,7 +5,19 @@
   },
   "keys": [
     {
-      "column": "Entity"
+      "last": false,
+      "max": false,
+      "column": "Entity",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "median": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,16 +27,20 @@
       "firstLastNotNull": false,
       "column": "Code",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "Entity"
     },
     {
       "last": false,
@@ -32,14 +48,17 @@
       "firstLastNotNull": false,
       "column": "Year",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -49,14 +68,17 @@
       "firstLastNotNull": false,
       "column": "Per capita CO₂ emissions (tonnes per capita)",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "float",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -66,14 +88,17 @@
       "firstLastNotNull": false,
       "column": "Meat_supply_kgperCap",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -83,14 +108,17 @@
       "firstLastNotNull": false,
       "column": "Urban (%)",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "float",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -100,8 +128,10 @@
       "firstLastNotNull": false,
       "column": "GDP per capita (int.-$) ($)",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -117,14 +147,17 @@
       "firstLastNotNull": false,
       "column": "Oil_prod_per_capita",
       "count": false,
+      "$idx": 6,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -134,14 +167,17 @@
       "firstLastNotNull": false,
       "column": "Meat_prod_per_capita",
       "count": false,
+      "$idx": 7,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -151,14 +187,17 @@
       "firstLastNotNull": false,
       "column": "eggs_prod_per_capita",
       "count": false,
+      "$idx": 8,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     }
@@ -202,8 +241,53 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "meaning": "Text",
+            "name": "Entity",
+            "type": "string"
+          },
+          {
+            "name": "Code_first",
+            "type": "string"
+          },
+          {
+            "name": "Per capita CO₂ emissions (tonnes per capita)_avg",
+            "type": "double"
+          },
+          {
+            "name": "Meat_supply_kgperCap_avg",
+            "type": "double"
+          },
+          {
+            "name": "Urban (%)_avg",
+            "type": "double"
+          },
+          {
+            "name": "Oil_prod_per_capita_avg",
+            "type": "double"
+          },
+          {
+            "name": "Meat_prod_per_capita_avg",
+            "type": "double"
+          },
+          {
+            "name": "eggs_prod_per_capita_avg",
+            "type": "double"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
