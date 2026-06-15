@@ -24,15 +24,7 @@
       },
       {
         "d": true,
-        "name": "meat_prod_tonnes"
-      },
-      {
-        "d": true,
         "name": "Meat_supply_kgperCap"
-      },
-      {
-        "d": true,
-        "name": "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)"
       },
       {
         "d": true,
@@ -41,10 +33,6 @@
       {
         "d": true,
         "name": "GDP per capita (int.-$) ($)"
-      },
-      {
-        "d": true,
-        "name": "Population"
       },
       {
         "d": true,
@@ -102,32 +90,6 @@
         "expression": "toNumber(val(\"Oil production (Etemad \u0026 Luciana) (terawatt-hours)\")) / Population",
         "column": "Oil_prod_per_capita",
         "errorColumn": ""
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "toNumber(meat_prod_tonnes)/toNumber(Population)",
-        "column": "Meat_prod_per_capita",
-        "errorColumn": ""
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "columns": [
-          "Meat_prod_per_capita"
-        ],
-        "reorderAction": "AT_END",
-        "appliesTo": "SINGLE_COLUMN"
       },
       "alwaysShowComment": false
     },
@@ -208,7 +170,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "FindReplace",
@@ -228,6 +190,80 @@
         "appliesTo": "SINGLE_COLUMN",
         "stopAfterFirstMatch": false,
         "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "toNumber(meat_prod_tonnes)/toNumber(Population)",
+        "column": "Meat_prod_per_capita",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "useDatasetForMapping": false,
+        "mapping": [
+          {
+            "from": "",
+            "to": "0"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "GDP per capita (int.-$) ($)"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)",
+          "meat_prod_tonnes",
+          "Population"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnValue",
+      "params": {
+        "normalizationMode": "EXACT",
+        "booleanMode": "AND",
+        "columns": [
+          "Entity"
+        ],
+        "values": [
+          "World"
+        ],
+        "matchingMode": "FULL_STRING",
+        "action": "REMOVE_ROW",
+        "appliesTo": "SINGLE_COLUMN",
+        "exclude": false,
+        "processNullOrEmptyValues": false
       },
       "alwaysShowComment": false
     }
