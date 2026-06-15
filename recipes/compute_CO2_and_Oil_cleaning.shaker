@@ -48,11 +48,15 @@
       },
       {
         "d": true,
-        "name": "oil_prod_per_capita"
+        "name": "Oil_prod_per_capita"
       },
       {
         "d": true,
-        "name": "Oil_prod_per_capita"
+        "name": "Meat_prod_per_capita"
+      },
+      {
+        "d": true,
+        "name": "eggs_prod_per_capita"
       }
     ]
   },
@@ -90,14 +94,140 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "toNumber(val([\"Oil production (Etemad \u0026 Luciana) (terawatt-hours)\"])) / toNumber(Population)",
-        "column": "oil_prod_per_capita",
+        "expression": "toNumber(val(\"Oil production (Etemad \u0026 Luciana) (terawatt-hours)\")) / Population",
+        "column": "Oil_prod_per_capita",
         "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "toNumber(meat_prod_tonnes)/toNumber(Population)",
+        "column": "Meat_prod_per_capita",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "columns": [
+          "Meat_prod_per_capita"
+        ],
+        "reorderAction": "AT_END",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "useDatasetForMapping": false,
+        "mapping": [
+          {
+            "from": "",
+            "to": "0"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "toNumber(val(\"Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)\")) / toNumber(Population) ",
+        "column": "eggs_prod_per_capita",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "eggs_prod_per_capita",
+        "columns": [
+          "Oil_prod_per_capita",
+          "Meat_prod_per_capita"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "useDatasetForMapping": false,
+        "mapping": [
+          {
+            "from": "",
+            "to": "0"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "meat_prod_tonnes"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "useDatasetForMapping": false,
+        "mapping": [
+          {
+            "from": "",
+            "to": "0"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "Meat_supply_kgperCap"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
       },
       "alwaysShowComment": false
     }
@@ -157,9 +287,11 @@
     "oil_prod_per_capita": 158,
     "meat_prod_tonnes": 135,
     "Code": 100,
+    "eggs_prod_per_capita": 165,
     "Food Balance Sheets: Eggs - Production (FAO (2017)) (tonnes)": 300,
     "Year": 100,
     "Meat_supply_kgperCap": 165,
+    "Meat_prod_per_capita": 190,
     "Oil production (Etemad \u0026 Luciana) (terawatt-hours)": 300,
     "Population": 134,
     "Urban (%)": 134,
