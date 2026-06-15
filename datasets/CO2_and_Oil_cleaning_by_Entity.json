@@ -92,10 +92,10 @@
       {"name":"Per capita CO₂ emissions (tonnes per capita)_avg","type":"double"},
       {"name":"Meat_supply_kgperCap_avg","type":"double"},
       {"name":"Urban (%)_avg","type":"double"},
+      {"name":"GDP per capita (int.-$) ($)_avg","type":"double"},
       {"name":"Oil_prod_per_capita_avg","type":"double"},
       {"name":"Meat_prod_per_capita_avg","type":"double"},
-      {"name":"eggs_prod_per_capita_avg","type":"double"},
-      {"name":"count","type":"bigint"}
+      {"name":"eggs_prod_per_capita_avg","type":"double"}
     ],
     "userModified": true
   },
