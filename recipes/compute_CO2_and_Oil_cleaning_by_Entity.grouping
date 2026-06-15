@@ -131,13 +131,14 @@
       "$idx": 5,
       "sum": false,
       "concat": false,
-      "type": "string",
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
-      "avg": false,
+      "avg": true,
       "median": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -202,7 +203,7 @@
       "first": false
     }
   ],
-  "globalCount": true,
+  "globalCount": false,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -269,6 +270,10 @@
             "type": "double"
           },
           {
+            "name": "GDP per capita (int.-$) ($)_avg",
+            "type": "double"
+          },
+          {
             "name": "Oil_prod_per_capita_avg",
             "type": "double"
           },
@@ -279,10 +284,6 @@
           {
             "name": "eggs_prod_per_capita_avg",
             "type": "double"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
           }
         ],
         "userModified": false
