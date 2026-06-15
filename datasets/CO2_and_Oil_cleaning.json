@@ -98,6 +98,7 @@
       {"name":"Urban (%)","type":"float"},
       {"name":"GDP per capita (int.-$) ($)","type":"string","meaning":"LongMeaning"},
       {"name":"Population","type":"string","meaning":"DoubleMeaning"},
+      {"name":"oil_prod_per_capita","type":"string"},
       {"name":"Oil_prod_per_capita","type":"string","meaning":"DoubleMeaning"}
     ],
     "userModified": true
