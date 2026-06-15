@@ -20,10 +20,6 @@
       },
       {
         "d": true,
-        "name": "Oil production (Etemad \u0026 Luciana) (terawatt-hours)"
-      },
-      {
-        "d": true,
         "name": "Meat_supply_kgperCap"
       },
       {
@@ -246,7 +242,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "FilterOnValue",
@@ -264,6 +260,20 @@
         "appliesTo": "SINGLE_COLUMN",
         "exclude": false,
         "processNullOrEmptyValues": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Oil production (Etemad \u0026 Luciana) (terawatt-hours)"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
       },
       "alwaysShowComment": false
     }
