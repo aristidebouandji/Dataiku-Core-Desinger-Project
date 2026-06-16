@@ -3,10 +3,68 @@
     "steps": [],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
-      "mode": "ALL"
+      "mode": "ALL",
+      "list": [
+        {
+          "name": "Entity",
+          "d": true
+        },
+        {
+          "name": "Code",
+          "d": true
+        },
+        {
+          "name": "Year",
+          "d": true
+        },
+        {
+          "name": "Per capita CO₂ emissions (tonnes per capita)",
+          "d": true
+        },
+        {
+          "name": "Meat_supply_kgperCap",
+          "d": true
+        },
+        {
+          "name": "Urban (%)",
+          "d": true
+        },
+        {
+          "name": "GDP per capita (int.-$) ($)",
+          "d": true
+        },
+        {
+          "name": "Oil_prod_per_capita",
+          "d": true
+        },
+        {
+          "name": "Meat_prod_per_capita",
+          "d": true
+        },
+        {
+          "name": "eggs_prod_per_capita",
+          "d": true
+        },
+        {
+          "name": "denserank",
+          "d": true
+        }
+      ]
     },
     "columnOrder": [],
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "Entity": 155,
+      "Code": 100,
+      "Year": 100,
+      "Per capita CO₂ emissions (tonnes per capita)": 300,
+      "Meat_supply_kgperCap": 165,
+      "Urban (%)": 134,
+      "GDP per capita (int.-$) ($)": 218,
+      "Oil_prod_per_capita": 183,
+      "Meat_prod_per_capita": 190,
+      "eggs_prod_per_capita": 190,
+      "denserank": 100
+    },
     "columnUseScientificNotationByName": {},
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
@@ -65,7 +123,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -330,6 +390,7 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
+        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
