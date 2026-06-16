@@ -73,12 +73,7 @@
       "valueColoringMode": "HASH",
       "coloringGroups": []
     },
-    "sorting": [
-      {
-        "column": "Meat_prod_per_capita",
-        "ascending": false
-      }
-    ],
+    "sorting": [],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
