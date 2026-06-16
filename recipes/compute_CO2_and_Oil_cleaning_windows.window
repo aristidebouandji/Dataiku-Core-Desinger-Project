@@ -5,6 +5,7 @@
   },
   "ntileValues": "10",
   "retrievedColumnsSelectionMode": "ALL",
+  "keys": [],
   "values": [
     {
       "last": false,
@@ -13,9 +14,11 @@
       "firstLastNotNull": false,
       "column": "Entity",
       "count": false,
+      "$idx": 0,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -36,9 +39,11 @@
       "firstLastNotNull": false,
       "column": "Code",
       "count": false,
+      "$idx": 1,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "string",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -59,9 +64,11 @@
       "firstLastNotNull": false,
       "column": "Year",
       "count": false,
+      "$idx": 2,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -82,9 +89,11 @@
       "firstLastNotNull": false,
       "column": "Per capita CO₂ emissions (tonnes per capita)",
       "count": false,
+      "$idx": 3,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "float",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -105,9 +114,11 @@
       "firstLastNotNull": false,
       "column": "Meat_supply_kgperCap",
       "count": false,
+      "$idx": 4,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -128,9 +139,11 @@
       "firstLastNotNull": false,
       "column": "Urban (%)",
       "count": false,
+      "$idx": 5,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "float",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -151,9 +164,11 @@
       "firstLastNotNull": false,
       "column": "GDP per capita (int.-$) ($)",
       "count": false,
+      "$idx": 6,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -174,9 +189,11 @@
       "firstLastNotNull": false,
       "column": "Oil_prod_per_capita",
       "count": false,
+      "$idx": 7,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -197,9 +214,11 @@
       "firstLastNotNull": false,
       "column": "Meat_prod_per_capita",
       "count": false,
+      "$idx": 8,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -220,9 +239,11 @@
       "firstLastNotNull": false,
       "column": "eggs_prod_per_capita",
       "count": false,
+      "$idx": 9,
       "lagValues": "1",
       "sum": false,
       "concat": false,
+      "type": "double",
       "lead": false,
       "concatDistinct": false,
       "dateDiffUnit": "DAY",
@@ -240,22 +261,100 @@
   "legacyUnboundedWindowStreamBehavior": false,
   "windows": [
     {
-      "windowUpperBound": 0.0,
-      "enablePartitioning": false,
-      "enableOrdering": false,
+      "windowLimitMode": "ROWS",
+      "windowUpperBound": 0,
+      "enablePartitioning": true,
+      "enableOrdering": true,
       "precedingRows": 0,
       "limitFollowing": false,
-      "orders": [],
+      "orders": [
+        {
+          "column": "Per capita CO₂ emissions (tonnes per capita)",
+          "desc": true
+        }
+      ],
       "limitPreceding": false,
       "followingRows": 0,
-      "windowLowerBound": 0.0,
-      "enableLimits": false
+      "windowLowerBound": 0,
+      "enableLimits": false,
+      "partitioningColumns": [
+        "Year"
+      ]
     }
   ],
   "computedColumns": [],
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "denserank",
+          "col": "Entity",
+          "$showList": false,
+          "num": 25,
+          "operator": "\u003c\u003d [number]"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "meaning": "Text",
+            "name": "Entity",
+            "type": "string"
+          },
+          {
+            "meaning": "Text",
+            "name": "Code",
+            "type": "string"
+          },
+          {
+            "name": "Year",
+            "type": "bigint"
+          },
+          {
+            "name": "Per capita CO₂ emissions (tonnes per capita)",
+            "type": "float"
+          },
+          {
+            "name": "Meat_supply_kgperCap",
+            "type": "double"
+          },
+          {
+            "name": "Urban (%)",
+            "type": "float"
+          },
+          {
+            "meaning": "DoubleMeaning",
+            "name": "GDP per capita (int.-$) ($)",
+            "type": "double"
+          },
+          {
+            "meaning": "DoubleMeaning",
+            "name": "Oil_prod_per_capita",
+            "type": "double"
+          },
+          {
+            "name": "Meat_prod_per_capita",
+            "type": "double"
+          },
+          {
+            "name": "eggs_prod_per_capita",
+            "type": "double"
+          },
+          {
+            "name": "denserank",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   },
   "cumeDist": false,
   "engineParams": {
@@ -297,6 +396,7 @@
   },
   "ntile": false,
   "rank": false,
-  "denseRank": false,
-  "rowNumber": false
+  "denseRank": true,
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
 }
