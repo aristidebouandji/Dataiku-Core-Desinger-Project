@@ -96,7 +96,8 @@
       {"name":"GDP per capita (int.-$) ($)","type":"double","meaning":"DoubleMeaning"},
       {"name":"Oil_prod_per_capita","type":"double","meaning":"DoubleMeaning"},
       {"name":"Meat_prod_per_capita","type":"double"},
-      {"name":"eggs_prod_per_capita","type":"double"}
+      {"name":"eggs_prod_per_capita","type":"double"},
+      {"name":"denserank","type":"bigint"}
     ],
     "userModified": true
   },
