@@ -1,0 +1,135 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL",
+      "list": [
+        {
+          "name": "Entity",
+          "d": true
+        },
+        {
+          "name": "Code_first",
+          "d": true
+        },
+        {
+          "name": "Per capita CO₂ emissions (tonnes per capita)_avg",
+          "d": true
+        },
+        {
+          "name": "Meat_supply_kgperCap_avg",
+          "d": true
+        },
+        {
+          "name": "Urban (%)_avg",
+          "d": true
+        },
+        {
+          "name": "GDP per capita (int.-$) ($)_avg",
+          "d": true
+        },
+        {
+          "name": "Oil_prod_per_capita_avg",
+          "d": true
+        },
+        {
+          "name": "Meat_prod_per_capita_avg",
+          "d": true
+        },
+        {
+          "name": "eggs_prod_per_capita_avg",
+          "d": true
+        }
+      ]
+    },
+    "columnOrder": [],
+    "columnWidthsByName": {
+      "Entity": 155,
+      "Code_first": 100,
+      "Per capita CO₂ emissions (tonnes per capita)_avg": 300,
+      "Meat_supply_kgperCap_avg": 195,
+      "Urban (%)_avg": 141,
+      "GDP per capita (int.-$) ($)_avg": 248,
+      "Oil_prod_per_capita_avg": 211,
+      "Meat_prod_per_capita_avg": 218,
+      "eggs_prod_per_capita_avg": 218
+    },
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "individualColumnsRules": [],
+      "valueColoringMode": "HASH",
+      "coloringGroups": []
+    },
+    "sorting": [
+      {
+        "column": "GDP per capita (int.-$) ($)_avg",
+        "ascending": false
+      }
+    ],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "customMeasures": [],
+  "reusableDimensions": [],
+  "hierarchies": []
+}
