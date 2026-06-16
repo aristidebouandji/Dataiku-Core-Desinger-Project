@@ -75,7 +75,7 @@
     },
     "sorting": [
       {
-        "column": "Year",
+        "column": "Meat_prod_per_capita",
         "ascending": false
       }
     ],
