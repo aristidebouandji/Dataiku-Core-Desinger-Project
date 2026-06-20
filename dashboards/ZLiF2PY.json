@@ -549,8 +549,8 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 8,
-              "height": 8
+              "width": 17,
+              "height": 16
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -593,10 +593,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 8,
-              "left": 0,
-              "width": 8,
-              "height": 8
+              "top": 16,
+              "left": 1,
+              "width": 16,
+              "height": 17
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -640,9 +640,9 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 8,
-              "width": 8,
-              "height": 8
+              "left": 17,
+              "width": 19,
+              "height": 16
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
