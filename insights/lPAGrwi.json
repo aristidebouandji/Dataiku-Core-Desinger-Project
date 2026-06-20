@@ -173,7 +173,24 @@
       "tooltipMeasures": [],
       "boxplotBreakdownDim": [],
       "boxplotValue": [],
-      "filters": [],
+      "filters": [
+        {
+          "filterType": "NUMERICAL_FACET",
+          "filterSelectionType": "RANGE_OF_VALUES",
+          "id": "1781914862471_20",
+          "column": "Year",
+          "label": "Year",
+          "columnType": "NUMERICAL",
+          "isA": "filter",
+          "isAGlobalFilter": false,
+          "useMinimalUi": false,
+          "isDrill": false,
+          "excludeOtherValues": false,
+          "allValuesInSample": false,
+          "active": true,
+          "includeEmptyValues": true
+        }
+      ],
       "xAxisFormatting": {
         "displayAxis": true,
         "showAxisTitle": true,
@@ -310,7 +327,7 @@
         "includeZero": true
       },
       "smoothing": true,
-      "strokeWidth": 2,
+      "strokeWidth": 4,
       "fillOpacity": 0.6,
       "tooltipOptions": {
         "display": true
@@ -366,7 +383,9 @@
           "values": [],
           "fixedValues": false
         },
-        "customColors": {}
+        "customColors": {
+          "m_Per capita CO₂ emissions (tonnes per capita)_SUM_1": "#91268F"
+        }
       },
       "colorGroups": [],
       "bubblesOptions": {
@@ -534,7 +553,7 @@
         "displayPointer": false
       },
       "useLiveProcessingIfAvailable": true,
-      "legendPlacement": "OUTER_RIGHT",
+      "legendPlacement": "SIDEBAR",
       "legendFormatting": {
         "fontSize": 11,
         "fontColor": "#333333",
