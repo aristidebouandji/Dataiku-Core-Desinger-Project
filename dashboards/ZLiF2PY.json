@@ -579,6 +579,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Évolution du taux moyen d\u0027urbanisation",
               "fontColor": "#000000",
               "fontSize": 13
             },
