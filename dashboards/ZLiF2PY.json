@@ -717,6 +717,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Top 10 pays urbanisation \u0026 émission CO2",
               "fontColor": "#000000",
               "fontSize": 13
             },
