@@ -54,6 +54,8 @@
             "measureIdx": 0,
             "label": "Sum of Urban (%), descending"
           },
+          "prefix": "",
+          "suffix": "",
           "multiplier": "Auto",
           "hideTrailingZeros": true,
           "digitGrouping": "DEFAULT",
@@ -81,7 +83,7 @@
           "computeMode": "NORMAL",
           "computeModeDim": 0,
           "multiplier": "Auto",
-          "digitGrouping": "DEFAULT",
+          "digitGrouping": "SPACE_POINT",
           "useParenthesesForNegativeValues": false,
           "shouldFormatInPercentage": false,
           "hideTrailingZeros": true,
@@ -412,8 +414,8 @@
         "heatDensityMapIntensity": 0.5,
         "heatDensityMapRadius": 0.5,
         "singleColor": "#193C81",
-        "transparency": 0.75,
-        "colorPalette": "default_theme",
+        "transparency": 0.95,
+        "colorPalette": "dku_tritanopia1",
         "customPalette": {
           "id": "__dku_custom__",
           "name": "Custom Palette",
@@ -421,7 +423,10 @@
           "values": [],
           "fixedValues": false
         },
-        "customColors": {}
+        "customColors": {
+          "m_Urban (%)_SUM_1": "#D6C222",
+          "m_Per capita CO₂ emissions (tonnes per capita)_SUM_1": "#9C4259"
+        }
       },
       "colorGroups": [],
       "bubblesOptions": {
@@ -528,7 +533,7 @@
         "filled": false,
         "polygonsSource": "MEASURES",
         "lineStyle": {
-          "width": 2.0,
+          "width": 1.5,
           "type": "SOLID"
         }
       },
