@@ -21,7 +21,11 @@
     },
     "lastModifiedOn": 1781926553970
   },
-  "tags": [],
+  "tags": [
+    "dashboard",
+    "wiki",
+    "page"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []
