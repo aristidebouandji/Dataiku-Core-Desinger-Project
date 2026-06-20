@@ -1,7 +1,16 @@
 {
   "name": "Page1",
   "layout": "WIKI_ARTICLE",
-  "attachments": [],
+  "attachments": [
+    {
+      "attachmentType": "DSS_OBJECT",
+      "taggableType": "DASHBOARD",
+      "smartId": "ZLiF2PY",
+      "details": {},
+      "attachedBy": "admin",
+      "attachedOn": 1781926692320
+    }
+  ],
   "creationTag": {
     "versionNumber": 0,
     "lastModifiedBy": {
