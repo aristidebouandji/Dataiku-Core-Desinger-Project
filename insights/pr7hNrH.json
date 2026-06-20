@@ -54,6 +54,8 @@
             "label": "No sorting",
             "sortAscending": true
           },
+          "prefix": "",
+          "suffix": "",
           "multiplier": "Auto",
           "hideTrailingZeros": true,
           "digitGrouping": "DEFAULT",
@@ -66,7 +68,38 @@
       ],
       "genericDimension1": [],
       "facetDimension": [],
-      "animationDimension": [],
+      "animationDimension": [
+        {
+          "numParams": {
+            "mode": "FIXED_NB",
+            "emptyBinsMode": "ZEROS",
+            "binSize": 1.0,
+            "niceBounds": false,
+            "customBinValues": [],
+            "nbBins": 10
+          },
+          "maxValues": 20,
+          "generateOthersCategory": true,
+          "forceLastPositionOthers": false,
+          "oneTickPerBin": "AUTO",
+          "filters": [],
+          "isA": "dimension",
+          "sort": {
+            "type": "AGGREGATION",
+            "sortId": "Meat_supply_kgperCap SUM 50  desc",
+            "measureIdx": 0,
+            "label": "Sum of Meat_supply_kgperCap, descending"
+          },
+          "multiplier": "Auto",
+          "hideTrailingZeros": true,
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "useLastValueAsTotal": false,
+          "column": "Entity",
+          "type": "ALPHANUM"
+        }
+      ],
       "genericMeasures": [
         {
           "column": "Meat_supply_kgperCap",
