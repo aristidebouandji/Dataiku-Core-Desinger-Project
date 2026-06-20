@@ -56,7 +56,7 @@
             "box": {
               "top": 13,
               "left": 0,
-              "width": 19,
+              "width": 18,
               "height": 14
             },
             "clickAction": "DO_NOTHING",
@@ -149,8 +149,8 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 13,
-              "left": 19,
-              "width": 17,
+              "left": 18,
+              "width": 18,
               "height": 14
             },
             "clickAction": "DO_NOTHING",
