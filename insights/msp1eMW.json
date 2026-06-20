@@ -354,7 +354,7 @@
       "hexbinNumber": 20,
       "hexbinRadiusMode": "NUM_HEXAGONS",
       "valuesInChartDisplayOptions": {
-        "displayValues": false,
+        "displayValues": true,
         "displayPieLabelsOrValues": true,
         "displayMode": "VALUES",
         "overlappingStrategy": "AUTO",
