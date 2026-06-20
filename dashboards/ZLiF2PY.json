@@ -9,8 +9,8 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 10,
-              "height": 8
+              "width": 18,
+              "height": 13
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -39,6 +39,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Consommation CO2 par Pays",
               "fontColor": "#000000",
               "fontSize": 13
             },
@@ -53,10 +54,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
-              "left": 15,
-              "width": 11,
-              "height": 8
+              "top": 13,
+              "left": 0,
+              "width": 19,
+              "height": 14
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -85,6 +86,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Correlation entre Consommation CO2 avec PIB avec droite de regression linéaire",
               "fontColor": "#000000",
               "fontSize": 13
             },
@@ -100,9 +102,9 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 28,
-              "width": 8,
-              "height": 8
+              "left": 18,
+              "width": 18,
+              "height": 13
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -131,7 +133,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
-              "title": "Evolution par Années",
+              "title": "Evolution de la consommation CO2 par Années et par Pays",
               "fontColor": "#000000",
               "fontSize": 13
             },
@@ -146,8 +148,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 8,
-              "left": 0,
+              "top": 13,
+              "left": 19,
               "width": 8,
               "height": 8
             },
@@ -181,7 +183,7 @@
               "fontColor": "#000000",
               "fontSize": 13
             },
-            "insightId": "hrqKMZf",
+            "insightId": "iybljyQ",
             "insightType": "chart",
             "displayMode": "INSIGHT",
             "useDashboardSpacing": true,
@@ -197,7 +199,7 @@
       "titleFontColor": "#444444",
       "titleFontSize": 28,
       "enableCrossFilters": true,
-      "backgroundColor": "#FFFFFF",
+      "backgroundColor": "#F2F2F2",
       "showFilterPanel": true,
       "filtersParams": {
         "panelPosition": "TOP",
