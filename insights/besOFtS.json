@@ -29,7 +29,7 @@
       "id": "a75a6c0e",
       "type": "lines",
       "variant": "normal",
-      "name": "Evolution d\u0027urbanisation par année",
+      "name": "Evolution moyenne d\u0027urbanisation par année",
       "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [
@@ -70,7 +70,7 @@
       "genericMeasures": [
         {
           "column": "Urban (%)",
-          "function": "SUM",
+          "function": "AVG",
           "type": "NUMERICAL",
           "displayed": true,
           "isA": "measure",
@@ -90,7 +90,7 @@
           "showValue": true,
           "showDisplayLabel": true,
           "labelPosition": "BOTTOM",
-          "percentile": 50.0,
+          "percentile": 75.0,
           "isCustomPercentile": false,
           "kpiTextAlign": "CENTER",
           "kpiValueFontSizeMode": "RESPONSIVE",
