@@ -6,7 +6,10 @@
       "attachmentType": "DSS_OBJECT",
       "taggableType": "DASHBOARD",
       "smartId": "ZLiF2PY",
-      "details": {},
+      "details": {
+        "objectDisplayName": "Global Sustainability \u0026 Economic Insights",
+        "userDisplayName": "Josue BOUANDJI"
+      },
       "attachedBy": "admin",
       "attachedOn": 1781926838943
     }
