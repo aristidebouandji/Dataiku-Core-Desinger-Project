@@ -180,6 +180,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Corrélation entre production pétrole et émission CO2 par pays",
               "fontColor": "#000000",
               "fontSize": 13
             },
@@ -193,6 +194,7 @@
           }
         ]
       },
+      "title": "Économie \u0026 Émission",
       "show": true,
       "showTitle": false,
       "titleAlign": "CENTER",
