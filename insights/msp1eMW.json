@@ -29,7 +29,7 @@
       "id": "f287fd16",
       "type": "stacked_bars",
       "variant": "normal",
-      "name": "Consommation du CO2 par pays",
+      "name": "Consommation du CO2 par années",
       "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [
