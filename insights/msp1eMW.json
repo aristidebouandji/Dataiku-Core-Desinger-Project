@@ -29,8 +29,8 @@
       "id": "f287fd16",
       "type": "stacked_bars",
       "variant": "normal",
-      "name": "Sum of Per capita CO₂ emissions (tonnes per capita) by Year",
-      "userEditedName": false,
+      "name": "Consommation du CO2 par pays",
+      "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [
         {
