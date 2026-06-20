@@ -27,10 +27,10 @@
     },
     "def": {
       "id": "939d4edb",
-      "type": "grouped_columns",
+      "type": "scatter",
       "variant": "normal",
-      "name": "Chart",
-      "userEditedName": false,
+      "name": "Consommation de viande par Pays",
+      "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [],
       "genericDimension1": [],
@@ -44,11 +44,50 @@
       "boxplotBreakdownHierarchyDimension": [],
       "xDimension": [],
       "yDimension": [],
-      "uaXDimension": [],
-      "uaYDimension": [],
+      "uaXDimension": [
+        {
+          "column": "GDP per capita (int.-$) ($)",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua",
+          "multiplier": "Auto",
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "hideTrailingZeros": true
+        }
+      ],
+      "uaYDimension": [
+        {
+          "column": "Meat_supply_kgperCap",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua",
+          "multiplier": "Auto",
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "hideTrailingZeros": true
+        }
+      ],
       "uaDimensionPair": [],
       "uaSize": [],
-      "uaColor": [],
+      "uaColor": [
+        {
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0,
+          "multiplier": "Auto",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "column": "Entity",
+          "type": "ALPHANUM"
+        }
+      ],
       "uaShape": [],
       "uaTooltip": [],
       "groupDimension": [],
@@ -86,6 +125,7 @@
       "tooltipMeasures": [],
       "boxplotBreakdownDim": [],
       "boxplotValue": [],
+      "filters": [],
       "xAxisFormatting": {
         "displayAxis": true,
         "showAxisTitle": true,
@@ -115,6 +155,7 @@
           "mode": "INTERVAL"
         },
         "customExtent": {
+          "editMode": "AUTO",
           "manualExtent": [
             null,
             null
@@ -154,6 +195,7 @@
             "mode": "INTERVAL"
           },
           "customExtent": {
+            "editMode": "AUTO",
             "manualExtent": [
               null,
               null
@@ -192,6 +234,7 @@
             "mode": "INTERVAL"
           },
           "customExtent": {
+            "editMode": "AUTO",
             "manualExtent": [
               null,
               null
@@ -277,10 +320,12 @@
         },
         "customColors": {}
       },
+      "colorGroups": [],
       "bubblesOptions": {
         "defaultRadius": 5.0,
         "singleShape": "FILLED_CIRCLE"
       },
+      "computeMode": "NORMAL",
       "xAxisMode": "NORMAL",
       "yAxisMode": "NORMAL",
       "pieOptions": {
@@ -298,7 +343,15 @@
           0.0,
           0.0
         ],
-        "chartWidth": 0.0,
+        "xRange": [
+          0.0,
+          556.7060330352783
+        ],
+        "yRange": [
+          184.893,
+          0.0
+        ],
+        "chartWidth": 630.0,
         "enabled": true,
         "persisted": true
       },
@@ -325,8 +378,8 @@
         },
         "optimizeRendering": false,
         "regression": {
-          "show": false,
-          "displayFormula": false,
+          "show": true,
+          "displayFormula": true,
           "type": "LINEAR",
           "labelPosition": "INSIDE_END",
           "lineFormatting": {
@@ -527,7 +580,9 @@
         },
         "horizontal": {
           "show": false,
-          "displayAxis": {},
+          "displayAxis": {
+            "type": "LEFT_Y_AXIS"
+          },
           "lineFormatting": {
             "type": "FILLED",
             "color": "#d9d9d9",
