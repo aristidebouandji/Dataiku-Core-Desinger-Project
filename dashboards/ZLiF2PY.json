@@ -9,7 +9,7 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 8,
+              "width": 10,
               "height": 8
             },
             "clickAction": "DO_NOTHING",
@@ -131,6 +131,7 @@
             },
             "titleOptions": {
               "showTitle": "YES",
+              "title": "Evolution par Années",
               "fontColor": "#000000",
               "fontSize": 13
             },
