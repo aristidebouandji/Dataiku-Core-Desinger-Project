@@ -1,0 +1,17 @@
+{
+  "name": "Page3",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1781926792056
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
