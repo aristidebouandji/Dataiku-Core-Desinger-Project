@@ -27,10 +27,10 @@
     },
     "def": {
       "id": "88ac64cd",
-      "type": "grouped_columns",
+      "type": "scatter",
       "variant": "normal",
-      "name": "Chart",
-      "userEditedName": false,
+      "name": "Correlation Urbanisation \u0026 Emission CO2",
+      "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [],
       "genericDimension1": [],
@@ -44,11 +44,51 @@
       "boxplotBreakdownHierarchyDimension": [],
       "xDimension": [],
       "yDimension": [],
-      "uaXDimension": [],
-      "uaYDimension": [],
+      "uaXDimension": [
+        {
+          "column": "Urban (%)",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua",
+          "multiplier": "Auto",
+          "decimalPlaces": 2,
+          "digitGrouping": "SPACE_POINT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "hideTrailingZeros": true
+        }
+      ],
+      "uaYDimension": [
+        {
+          "column": "Per capita CO₂ emissions (tonnes per capita)",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua",
+          "multiplier": "Auto",
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "hideTrailingZeros": true
+        }
+      ],
       "uaDimensionPair": [],
       "uaSize": [],
-      "uaColor": [],
+      "uaColor": [
+        {
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0,
+          "multiplier": "Auto",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "column": "Entity",
+          "type": "ALPHANUM"
+        }
+      ],
       "uaShape": [],
       "uaTooltip": [],
       "groupDimension": [],
@@ -86,6 +126,7 @@
       "tooltipMeasures": [],
       "boxplotBreakdownDim": [],
       "boxplotValue": [],
+      "filters": [],
       "xAxisFormatting": {
         "displayAxis": true,
         "showAxisTitle": true,
@@ -115,6 +156,7 @@
           "mode": "INTERVAL"
         },
         "customExtent": {
+          "editMode": "AUTO",
           "manualExtent": [
             null,
             null
@@ -154,6 +196,7 @@
             "mode": "INTERVAL"
           },
           "customExtent": {
+            "editMode": "AUTO",
             "manualExtent": [
               null,
               null
@@ -192,6 +235,7 @@
             "mode": "INTERVAL"
           },
           "customExtent": {
+            "editMode": "AUTO",
             "manualExtent": [
               null,
               null
@@ -277,10 +321,12 @@
         },
         "customColors": {}
       },
+      "colorGroups": [],
       "bubblesOptions": {
         "defaultRadius": 5.0,
         "singleShape": "FILLED_CIRCLE"
       },
+      "computeMode": "NORMAL",
       "xAxisMode": "NORMAL",
       "yAxisMode": "NORMAL",
       "pieOptions": {
@@ -298,7 +344,15 @@
           0.0,
           0.0
         ],
-        "chartWidth": 0.0,
+        "xRange": [
+          0.0,
+          414.22678563690187
+        ],
+        "yRange": [
+          127.40474999999999,
+          0.0
+        ],
+        "chartWidth": 481.0,
         "enabled": true,
         "persisted": true
       },
@@ -316,7 +370,7 @@
         "equalScales": false,
         "identityLine": false,
         "connectPoints": {
-          "enabled": false,
+          "enabled": true,
           "splitBy": "COLOR",
           "lineFormatting": {
             "color": "#000",
@@ -325,8 +379,8 @@
         },
         "optimizeRendering": false,
         "regression": {
-          "show": false,
-          "displayFormula": false,
+          "show": true,
+          "displayFormula": true,
           "type": "LINEAR",
           "labelPosition": "INSIDE_END",
           "lineFormatting": {
@@ -527,7 +581,9 @@
         },
         "horizontal": {
           "show": false,
-          "displayAxis": {},
+          "displayAxis": {
+            "type": "LEFT_Y_AXIS"
+          },
           "lineFormatting": {
             "type": "FILLED",
             "color": "#d9d9d9",
