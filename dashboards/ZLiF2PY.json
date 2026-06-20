@@ -595,8 +595,8 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 16,
-              "left": 1,
-              "width": 16,
+              "left": 0,
+              "width": 17,
               "height": 17
             },
             "clickAction": "DO_NOTHING",
@@ -739,7 +739,7 @@
       "titleFontColor": "#444444",
       "titleFontSize": 28,
       "enableCrossFilters": true,
-      "backgroundColor": "#FFFFFF",
+      "backgroundColor": "#D3C9A1",
       "showFilterPanel": true,
       "filters": [
         {
