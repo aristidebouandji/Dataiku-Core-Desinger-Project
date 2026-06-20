@@ -29,7 +29,7 @@
       "id": "2a9ffdd3",
       "type": "scatter",
       "variant": "normal",
-      "name": "Corrélation entre production pétrole et émission CO2",
+      "name": "Corrélation entre production pétrole et émission CO2 par pays",
       "userEditedName": true,
       "displayWithEChartsByDefault": true,
       "genericDimension0": [],
