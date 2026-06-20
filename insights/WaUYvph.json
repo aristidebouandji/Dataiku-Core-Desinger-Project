@@ -66,7 +66,38 @@
       ],
       "genericDimension1": [],
       "facetDimension": [],
-      "animationDimension": [],
+      "animationDimension": [
+        {
+          "numParams": {
+            "mode": "TREAT_AS_ALPHANUM",
+            "emptyBinsMode": "ZEROS",
+            "binSize": 100.0,
+            "niceBounds": false,
+            "customBinValues": [],
+            "nbBins": 5
+          },
+          "maxValues": 100,
+          "generateOthersCategory": true,
+          "forceLastPositionOthers": false,
+          "oneTickPerBin": "AUTO",
+          "filters": [],
+          "isA": "dimension",
+          "sort": {
+            "type": "NATURAL",
+            "sortId": "NATURAL",
+            "label": "Natural ordering",
+            "sortAscending": true
+          },
+          "multiplier": "Auto",
+          "hideTrailingZeros": true,
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "useLastValueAsTotal": false,
+          "column": "Year",
+          "type": "NUMERICAL"
+        }
+      ],
       "genericMeasures": [
         {
           "column": "Meat_supply_kgperCap",
@@ -81,7 +112,8 @@
           "computeMode": "NORMAL",
           "computeModeDim": 0,
           "multiplier": "Auto",
-          "digitGrouping": "DEFAULT",
+          "decimalPlaces": 2,
+          "digitGrouping": "SPACE_POINT",
           "useParenthesesForNegativeValues": false,
           "shouldFormatInPercentage": false,
           "hideTrailingZeros": true,
@@ -195,7 +227,8 @@
           "axisTicksFormatting": {
             "fontSize": 12,
             "fontColor": "#333333",
-            "hasBackground": false
+            "hasBackground": false,
+            "fontFamily": "SourceSansPro"
           }
         },
         "ticksConfig": {
