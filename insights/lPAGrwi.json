@@ -68,7 +68,38 @@
       ],
       "genericDimension1": [],
       "facetDimension": [],
-      "animationDimension": [],
+      "animationDimension": [
+        {
+          "numParams": {
+            "mode": "TREAT_AS_ALPHANUM",
+            "emptyBinsMode": "ZEROS",
+            "binSize": 100.0,
+            "niceBounds": false,
+            "customBinValues": [],
+            "nbBins": 30
+          },
+          "maxValues": 100,
+          "generateOthersCategory": true,
+          "forceLastPositionOthers": false,
+          "oneTickPerBin": "AUTO",
+          "filters": [],
+          "isA": "dimension",
+          "sort": {
+            "type": "NATURAL",
+            "sortId": "NATURAL",
+            "label": "Natural ordering",
+            "sortAscending": true
+          },
+          "multiplier": "Auto",
+          "hideTrailingZeros": true,
+          "digitGrouping": "DEFAULT",
+          "useParenthesesForNegativeValues": false,
+          "shouldFormatInPercentage": false,
+          "useLastValueAsTotal": false,
+          "column": "Year",
+          "type": "NUMERICAL"
+        }
+      ],
       "genericMeasures": [
         {
           "column": "Per capita CO₂ emissions (tonnes per capita)",
@@ -121,7 +152,7 @@
             "addDetails": false,
             "additionalMeasures": [],
             "placementMode": "AUTO",
-            "spacing": 5
+            "spacing": 3
           },
           "colorRules": []
         }
@@ -338,7 +369,7 @@
       "hexbinNumber": 20,
       "hexbinRadiusMode": "NUM_HEXAGONS",
       "valuesInChartDisplayOptions": {
-        "displayValues": false,
+        "displayValues": true,
         "displayPieLabelsOrValues": true,
         "displayMode": "LABELS",
         "overlappingStrategy": "AUTO",
