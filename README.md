@@ -29,7 +29,9 @@ Le projet intègre trois sources de données distinctes brutes nettoyées et enr
 2. **Nettoyage & Préparation (Data Prep) :** Parsing des types, gestion avancée des valeurs manquantes, filtrage des agrégations régionales et création de ratios par habitant au sein de recettes *Prepare*.
 3. **Analyses Avancées :** Implémentation de recettes *Window* (fonctions analytiques de fenêtrage) pour générer des classements dynamiques cumulés (`denserank`) et des analyses d'évolution temporelle.
 
-* **Note pour les recruteurs techniques :** Le bundle complet de l'architecture (`.zip`) est présent à la racine de ce dépôt. Il contient l'intégralité du pipeline, des recettes, du dashboard et de la documentation interne. Il est réimportable en 1 clic sur n'importe quelle instance Dataiku DSS.*
+* **Bon à savoir :** Le bundle complet de l'architecture (`.zip`) est présent à la racine de ce dépôt. Il contient l'intégralité du pipeline, des recettes, du dashboard et de la documentation interne. Il est réimportable en 1 clic sur n'importe quelle instance Dataiku DSS.*
+
+  ![Architecture projet](Flow.png)
 
 ---
 
@@ -41,13 +43,30 @@ L'analyse métier est structurée en **3 volets analytiques majeurs** (correspon
 * **Focus :** Corrélation entre le PIB, l'exploitation des énergies fossiles et l'intensité des émissions de CO2.
 * **Message Clé :** La richesse économique mondiale reste historiquement indexée sur la pollution atmosphérique. La régression linéaire met en évidence que le PIB par habitant dicte l'empreinte carbone, un phénomène dramatiquement accéléré pour les pays exportateurs ou fortement dépendants du pétrole (ex: Qatar, Koweït).
 
+  ![Dashboard page1.1](DB_P1.1.png)
+
+  ![Dashboard page1.2](DB_P1.2.png)
+
 ###  Volet 2 : Richesse Économique et Empreinte Alimentaire
 * **Focus :** Évolution de la production et consommation de viande par habitant en fonction du développement économique.
 * **Message Clé :** L'assiette du citoyen global se transforme à mesure que le niveau de vie s'élève. Les pays développés affichent une forte augmentation de la consommation de protéines animales (l'Australie et le Canada se démarquant parmi les plus grands producteurs par habitant), posant la question de l'empreinte environnementale indirecte des régimes alimentaires.
 
+  ![Dashboard page2.1](DB_P2.1.png)
+
+  ![Dashboard page2.2](DB_P2.2.png)
+
 ###  Volet 3 : Urbanisation, Densité et Perspectives Environnementales
 * **Focus :** Transition démographique, concentration des populations dans les métropoles et impact carbone (Analyse multifactorielle via Radar Charts).
 * **Message Clé :** La concentration urbaine agit comme un accélérateur d'infrastructures énergétiques. Le graphique en radar met en lumière que les pays les plus urbanisés (Belgique, Koweït) sont parmi les plus gros émetteurs de CO2. Cependant, des modèles de cités-États hautement technologiques comme Singapour illustrent qu'une urbanisation à 100% maîtrisée peut viser un plafonnement de son empreinte.
+
+  ![Dashboard page3.1](DB_P3.1.png)
+
+  ![Dashboard page3.2](DB_P3.2.png)
+
+
+  ### Wiki : Documentation du projet
+
+  ![Documentation](Page_Wiki.png)
 
 ---
 
